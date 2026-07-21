@@ -1,0 +1,29 @@
+{{ form_start(form) }}
+    <div class="mb-3">
+        {{ form_label(form.title) }}
+        {{ form_widget(form.title) }}
+    </div>
+
+    <div class="mb-3">
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description) }}
+    </div>
+
+    <div class="row bg-light p-3 rounded border mb-3 mx-0">
+        <h5 class="text-secondary mb-3">Paramètres de Collaboration</h5>
+        
+        <div class="col-md-6 mb-3 mb-md-0">
+            {{ form_label(form.status) }}
+            {{ form_widget(form.status) }}
+        </div>
+        
+        <div class="col-md-6">
+            {{ form_label(form.assignedTo) }}
+            {{ form_widget(form.assignedTo) }}
+        </div>
+    </div>
+    
+    <div class="d-grid gap-2 mt-4">
+        <button class="btn btn-success btn-lg shadow-sm">Enregistrer la tâche</button>
+    </div>
+{{ form_end(form) }}
